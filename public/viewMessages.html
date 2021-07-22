@@ -36,10 +36,37 @@
             <br>
             </div>
         </div>
+        <div class="columns is-centered">
+            <div class="column is-half">
+                <article id="errorMessage" class="message is-danger hidden">
+                    <div class="message-header">
+                        <p>Error</p>
+                        <button id="messageClose" class="delete" aria-label="delete" onclick="closeError()"></button>
+                    </div>
+                    <div class="message-body">
+                        No message found
+                    </div>
+                </article>
+            </div>
+        </div>
+        
         <section class="container">
-            <h2 id="message" class="subtitle is-4"></h2>
+            <div id="messageModal" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                    <div class='box'>
+                        <article class="media">
+                            <div class="media-content">
+                                <div class="content">
+                                    <p id="message"></p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <button id="modalClose" class="modal-close is-large" aria-label="close" onclick="closeModal()"></button>
+            </div>
         </section>
-
     </section>
   <script src="js/viewMessages.js"></script>
   </body>
